@@ -13,7 +13,8 @@
 
 from datetime import datetime
 
-# Start defining M(a,b,c)...
+# Start defining M(a,b,c):
+# By observation, M can only assume the values 1,2,3,4,6,8,12,24
 def M(a,b,c):
   return M3(a,b,c) * M8(a,b,c)
 
@@ -28,11 +29,14 @@ def M8(a,b,c):
   else: return 1
 
 def Mm(a,b,c,m):
-  for n in range(m):
+  for n in xrange(m):
     p = n*(n*(n*(n+a)+b)+c)
     if (p % m): return False
   return True
 
+# Then define S(N):
+# Divide a cube of N^3 size into smaller ones of size 24^3
+# Add vectors of height 0 ~ 23 as remainders
 def S(N):
   S = Scube()
   k = N // 24
@@ -53,18 +57,18 @@ def Scube():
     'bc'  : 24 * [0], \
     'abc' : 24 * [0]  \
   }
-  for a in range(1,25):
-    for b in range(1,25):
-      for c in range(1,25):
+  for a in xrange(1,25):
+    for b in xrange(1,25):
+      for c in xrange(1,25):
         m = M(a,b,c)
         S['0'] += m
-        for r in range(a,24): S['a'][r] += m
-        for r in range(b,24): S['b'][r] += m
-        for r in range(c,24): S['c'][r] += m
-        for r in range(max((a,b)),24): S['ab'][r] += m
-        for r in range(max((a,c)),24): S['ac'][r] += m
-        for r in range(max((b,c)),24): S['bc'][r] += m
-        for r in range(max((a,b,c)),24): S['abc'][r] += m
+        for r in xrange(a,24): S['a'][r] += m
+        for r in xrange(b,24): S['b'][r] += m
+        for r in xrange(c,24): S['c'][r] += m
+        for r in xrange(max((a,b)),24): S['ab'][r] += m
+        for r in xrange(max((a,c)),24): S['ac'][r] += m
+        for r in xrange(max((b,c)),24): S['bc'][r] += m
+        for r in xrange(max((a,b,c)),24): S['abc'][r] += m
   return S
 
 if __name__ == "__main__":
