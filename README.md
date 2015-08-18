@@ -6,5 +6,8 @@
 | --- |:--------------------------:| -------------:|
 | 1   | Multiples of 3 and 5       | java          |
 | 2   | Even Fibonacci numbers     | java          |
+| 3   | Largest prime factor       | java          |
+| 4   | Largest palindrome product | java          |
+| 5   | Smallest product           | java          |
 | 402 | Integer-valued polynomials | python        |
 

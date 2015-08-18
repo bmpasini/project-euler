@@ -34,19 +34,16 @@ public class prob4 {
 	public static List<Integer> decomposeNumIntoReverseList(int n) {
 		List<Integer> numList = new ArrayList<>();
 		int N = n;
-		
 		while (N > 1) {
 			numList.add(N % 10);
 			N = N / 10;
 		}
-		
 		return numList;
 	}
 	
 	public static List<Integer> reverseList(List<Integer> reverseList) {
 		List<Integer> list = new ArrayList<Integer>(reverseList);
-		for(int i = 0; i < list.size() / 2; i++)
-		{
+		for(int i = 0; i < list.size() / 2; i++) {
 		    int temp = list.get(i);
 		    list.set(i, list.get(list.size() - i - 1));
 		    list.set(list.size() - i - 1, temp);
