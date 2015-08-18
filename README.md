@@ -10,5 +10,6 @@
 | 4   | Largest palindrome product | java          |
 | 5   | Smallest product           | java          |
 | 6   | Sum square difference      | java          |
+| 7   | 10001st prime              | java          |
 | 402 | Integer-valued polynomials | python        |
 
