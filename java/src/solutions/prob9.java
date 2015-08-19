@@ -36,5 +36,4 @@ public class prob9 {
 	public static double findc(int a, int b) {
 		return Math.sqrt(a*a + b*b);
 	}
-
 }
