@@ -12,5 +12,6 @@
 | 6   | Sum square difference       | java          |
 | 7   | 10001st prime               | java          |
 | 8   | Largest product in a series | java          |
+| 9   | Special Pythagorean triplet | java          |
 | 402 | Integer-valued polynomials  | python        |
 
