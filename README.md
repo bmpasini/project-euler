@@ -13,5 +13,6 @@
 | 7   | 10001st prime               | java          |
 | 8   | Largest product in a series | java          |
 | 9   | Special Pythagorean triplet | java          |
+| 96  | Su Doku                     | c             |
 | 402 | Integer-valued polynomials  | python        |
 
