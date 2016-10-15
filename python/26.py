@@ -1,7 +1,7 @@
-def S():
+def S(d):
   n = 0
   res = None
-  for i in range(2, 1001):
+  for i in range(2, d+1):
     remainders = list()
     remainder = 10 % i
     while remainder not in remainders and remainder != 0:
@@ -12,4 +12,4 @@ def S():
       res = i
   return res
 
-print(S())
+print(S(1000))
